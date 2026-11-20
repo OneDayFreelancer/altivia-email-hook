@@ -1,5 +1,5 @@
 export interface RenderedEmail {
-    subject: string;
-    html: string;
-    text: string;
+  subject: string
+  html: string
+  text: string
 }

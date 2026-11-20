@@ -1,3 +1,3 @@
 export interface WebhookProperty {
-    secret: string;
+  secret: string
 }

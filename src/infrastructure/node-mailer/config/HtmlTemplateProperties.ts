@@ -1,3 +1,3 @@
 export interface HtmlTemplateProperties {
-    supabaseUrl: string;
+  supabaseUrl: string
 }

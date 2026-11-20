@@ -1,3 +1,3 @@
 export interface ServerProperty {
-    port: number;
+  port: number
 }
