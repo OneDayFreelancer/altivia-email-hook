@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.*
+.git
+.github
+.idea
+.vscode
+*.log
+README.md
+test-hook.mjs
+Claude outputs
