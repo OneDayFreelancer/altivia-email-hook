@@ -1,9 +1,9 @@
 import { Webhook } from "standardwebhooks"
-import type { WebhookPort } from "@/domain/ports/WebhookPort.js"
 import { InvalidSignatureError } from "@/domain/exceptions/InvalidSignatureError.js"
-import { SupabaseWebhookMapper } from "@/infrastructure/webhook/mappers/SupabaseWebhookMapper.js"
 import type { AuthEmail } from "@/domain/models/AuthEmail.js"
+import type { WebhookPort } from "@/domain/ports/WebhookPort.js"
 import type { WebhookProperty } from "@/infrastructure/webhook/config/WebhookProperty.js"
+import { SupabaseWebhookMapper } from "@/infrastructure/webhook/mappers/SupabaseWebhookMapper.js"
 
 /** Verifica la firma Standard Webhooks con que Supabase firma el hook. */
 export class NotifyWebhookAdapter implements WebhookPort {

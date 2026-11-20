@@ -1,15 +1,15 @@
 import nodeProcess from "node:process"
-import { serve, type ServerType } from "@hono/node-server"
-import { ServerConfig } from "@/shared/config/ServerConfig.js"
+import { type ServerType, serve } from "@hono/node-server"
+import { NotifyAuthEmailSentUseCase } from "@/application/NotifyAuthEmailSentUseCase.js"
 import { SendAuthEmailUseCase } from "@/application/SendAuthEmailUseCase.js"
-import { NodeMailerAdapter } from "@/infrastructure/node-mailer/NodeMailerAdapter.js"
-import { SmtpConfig } from "@/infrastructure/node-mailer/config/SmtpConfig.js"
 import { HtmlTemplateConfig } from "@/infrastructure/node-mailer/config/HtmlTemplateConfig.js"
+import { SmtpConfig } from "@/infrastructure/node-mailer/config/SmtpConfig.js"
+import { NodeMailerAdapter } from "@/infrastructure/node-mailer/NodeMailerAdapter.js"
 import { SupabaseHtmlTemplateAdapter } from "@/infrastructure/node-mailer/SupabaseHtmlTemplateAdapter.js"
+import { EmailController } from "@/infrastructure/web/EmailController.js"
 import { WebhookConfig } from "@/infrastructure/webhook/config/WebhookConfig.js"
 import { NotifyWebhookAdapter } from "@/infrastructure/webhook/NotifyWebhookAdapter.js"
-import { NotifyAuthEmailSentUseCase } from "@/application/NotifyAuthEmailSentUseCase.js"
-import { EmailController } from "@/infrastructure/web/EmailController.js"
+import { ServerConfig } from "@/shared/config/ServerConfig.js"
 
 export class Main {
   private server?: ServerType

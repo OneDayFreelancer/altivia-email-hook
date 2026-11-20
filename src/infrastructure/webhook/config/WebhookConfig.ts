@@ -1,5 +1,5 @@
-import { getMissingKeys } from "@/shared/utils/KeyUtils.js"
 import type { WebhookProperty } from "@/infrastructure/webhook/config/WebhookProperty.js"
+import { getMissingKeys } from "@/shared/utils/KeyUtils.js"
 
 const REQUIRED = ["SEND_EMAIL_HOOK_SECRET"] as const
 

@@ -1,7 +1,7 @@
 import { type Context, Hono } from "hono"
 import type { NotifyAuthEmailSentUseCase } from "@/application/NotifyAuthEmailSentUseCase.js"
-import { InvalidSignatureError } from "@/domain/exceptions/InvalidSignatureError.js"
 import { InvalidAuthEmailError } from "@/domain/exceptions/InvalidAuthEmailError.js"
+import { InvalidSignatureError } from "@/domain/exceptions/InvalidSignatureError.js"
 
 type ErrorStatus = 400 | 401 | 500
 

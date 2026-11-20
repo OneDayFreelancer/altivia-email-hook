@@ -1,9 +1,9 @@
-import type { HtmlTemplatePort } from "@/domain/ports/HtmlTemplatePort.js"
 import type { AuthEmail } from "@/domain/models/AuthEmail.js"
 import type { RenderedEmail } from "@/domain/models/RenderedEmail.js"
-import { HtmlUtils } from "@/infrastructure/node-mailer/utils/HtmlUtils.js"
-import { EmailMapper } from "@/infrastructure/node-mailer/mappers/EmailMapper.js"
+import type { HtmlTemplatePort } from "@/domain/ports/HtmlTemplatePort.js"
 import type { HtmlTemplateProperties } from "@/infrastructure/node-mailer/config/HtmlTemplateProperties.js"
+import { EmailMapper } from "@/infrastructure/node-mailer/mappers/EmailMapper.js"
+import { HtmlUtils } from "@/infrastructure/node-mailer/utils/HtmlUtils.js"
 
 const SUBJECTS: Record<string, string> = {
   signup: "Confirma tu correo",

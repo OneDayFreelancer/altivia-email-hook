@@ -1,7 +1,7 @@
-import type { SmtpProperty } from "@/infrastructure/node-mailer/config/SmtpProperty.js"
-import type { MailerPort } from "@/domain/ports/MailerPort.js"
-import type { OutgoingEmail } from "@/domain/models/OutgoingEmail.js"
 import { createTransport, type Transporter } from "nodemailer"
+import type { OutgoingEmail } from "@/domain/models/OutgoingEmail.js"
+import type { MailerPort } from "@/domain/ports/MailerPort.js"
+import type { SmtpProperty } from "@/infrastructure/node-mailer/config/SmtpProperty.js"
 
 export class NodeMailerAdapter implements MailerPort {
   private readonly transporter: Transporter

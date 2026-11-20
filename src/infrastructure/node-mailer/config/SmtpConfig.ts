@@ -1,5 +1,5 @@
-import type { SmtpProperty } from "./SmtpProperty.js"
 import { getMissingKeys } from "@/shared/utils/KeyUtils.js"
+import type { SmtpProperty } from "./SmtpProperty.js"
 
 const REQUIRED = ["SMTP_HOST", "SMTP_USER", "SMTP_PASS", "MAIL_FROM"] as const
 

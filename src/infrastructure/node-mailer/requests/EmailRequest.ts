@@ -1,5 +1,5 @@
-import type { AuthEmail } from "@/domain/models/AuthEmail.js"
 import { InvalidAuthEmailError } from "@/domain/exceptions/InvalidAuthEmailError.js"
+import type { AuthEmail } from "@/domain/models/AuthEmail.js"
 
 export class EmailRequest {
   readonly to: string
