@@ -9,6 +9,8 @@
 .idea/shelf
 .idea
 
+/dist
+
 # deps
 node_modules/
 
