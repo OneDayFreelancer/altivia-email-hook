@@ -93,12 +93,18 @@ jobs:
 
             export INFISICAL_TOKEN=$(infisical login \
               --method=universal-auth \
+              --domain="$INFISICAL_DOMAIN" \
               --client-id="$INFISICAL_CLIENT_ID" \
               --client-secret="$INFISICAL_CLIENT_SECRET" \
               --plain --silent)
             
-            infisical sm run --projectId="$INFISICAL_PROJECT_ID" --env=prod -- docker compose pull
-            infisical sm run --projectId="$INFISICAL_PROJECT_ID" --env=prod -- docker compose up -d
+            docker compose pull
+            
+            infisical run \
+            --domain="$INFISICAL_DOMAIN" \
+            --projectId="$INFISICAL_PROJECT_ID" \
+            --env=prod \
+            -- docker compose up -d
             
             unset INFISICAL_TOKEN
 
