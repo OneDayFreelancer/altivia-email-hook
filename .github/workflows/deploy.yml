@@ -101,9 +101,10 @@ jobs:
             docker compose pull
             
             infisical run \
-              --domain=$INFISICAL_DOMAIN \
-              --projectId=$INFISICAL_PROJECT_ID \
-              --env=prod -- env | head
+            --domain="$INFISICAL_DOMAIN" \
+            --projectId="$INFISICAL_PROJECT_ID" \
+            --env=prod \
+            -- docker compose up -d
             
             unset INFISICAL_TOKEN
 
