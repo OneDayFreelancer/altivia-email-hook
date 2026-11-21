@@ -108,8 +108,5 @@ jobs:
             
             unset INFISICAL_TOKEN
 
-            docker compose pull
-            docker compose up -d
-
             docker logout ghcr.io
             docker image prune -f
