@@ -12,8 +12,9 @@ export class NodeMailerAdapter implements MailerPort {
     this.transporter = createTransport({
       host: config.host,
       port: config.port,
-      secure: config.port === 465,
+      secure: false,
       auth: { user: config.user, pass: config.pass },
+      tls: { rejectUnauthorized: process.env.SMTP_TLS_REJECT_UNAUTHORIZED !== "false" },
     })
   }
 
